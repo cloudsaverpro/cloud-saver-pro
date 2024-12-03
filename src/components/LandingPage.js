@@ -114,8 +114,6 @@ const LandingPage = () => {
                 body: new URLSearchParams(formData).toString()
             });
 
-            const data = await response.json();
-
             if (!response.ok) {
                 throw new Error('Failed to send message');
             }
@@ -197,11 +195,13 @@ const LandingPage = () => {
                         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                             Expert consultation to reduce your cloud infrastructure expenses while maintaining performance
                         </p>
+                        <a href="#contact">
                         <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 
               transform hover:scale-105 transition-all duration-200 inline-flex items-center">
-                            Get Started
+                              Get Started
                             <ArrowRight className="ml-2 w-4 h-4" />
                         </button>
+                        </a> 
                     </div>
                 </div>
             </section>
