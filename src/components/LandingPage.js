@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../images/csp_crop4.png'
 import { ArrowRight, Cloud, DollarSign, PieChart, Mail, Menu, X, ChevronUp } from 'lucide-react';
 
 const LandingPage = () => {
@@ -153,7 +154,7 @@ const LandingPage = () => {
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex-shrink-0 font-bold text-xl text-blue-600">
-                            Cloud Saver Pro
+                            <img alt="CloudSaverPro.com" src={logo} width="220"/>
                         </div>
 
                         {/* Desktop Navigation */}
