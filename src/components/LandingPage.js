@@ -264,7 +264,7 @@ const LandingPage = () => {
                         Let's Optimize Your Cloud Costs
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="card">
+                        <div class="card bg-gray-50 p-4 rounded-lg shadow-lg">
 
 
                             {formStatus.success && (
