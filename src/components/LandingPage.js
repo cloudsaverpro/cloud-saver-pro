@@ -57,14 +57,8 @@ const LandingPage = () => {
     const testimonials = [
         {
             quote: "Reduced our AWS costs by 40% in just two months. Incredible ROI.",
-            author: "Sarah Chen",
-            role: "CTO, TechStart Inc",
-            image: "/api/placeholder/64/64"
-        },
-        {
-            quote: "Their expertise in cloud architecture saved us thousands monthly.",
-            author: "Michael Rodriguez",
-            role: "Head of Infrastructure, DataFlow",
+            author: "Hitesh Mittal",
+            role: "Director, ALFO Systems",
             image: "/api/placeholder/64/64"
         }
     ];
@@ -154,7 +148,7 @@ const LandingPage = () => {
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex-shrink-0 font-bold text-xl text-blue-600">
-                            <img alt="CloudSaverPro.com" src={logo} width="220"/>
+                            <img alt="CloudSaverPro.com" src={logo} width="220" />
                         </div>
 
                         {/* Desktop Navigation */}
@@ -197,12 +191,12 @@ const LandingPage = () => {
                             Expert consultation to reduce your cloud infrastructure expenses while maintaining performance
                         </p>
                         <a href="#contact">
-                        <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 
+                            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 
               transform hover:scale-105 transition-all duration-200 inline-flex items-center">
-                              Get Started
-                            <ArrowRight className="ml-2 w-4 h-4" />
-                        </button>
-                        </a> 
+                                Get Started
+                                <ArrowRight className="ml-2 w-4 h-4" />
+                            </button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -269,85 +263,94 @@ const LandingPage = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
                         Let's Optimize Your Cloud Costs
                     </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="card">
 
-                    {formStatus.success && (
-                        <div className="mb-6 p-4 bg-green-50 border border-green-200 text-green-600 rounded-lg">
-                            Message sent successfully! We'll get back to you soon.
-                        </div>
-                    )}
 
-                    {formStatus.error && (
-                        <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-600 rounded-lg">
-                            {formStatus.error}
-                        </div>
-                    )}
+                            {formStatus.success && (
+                                <div className="mb-6 p-4 bg-green-50 border border-green-200 text-green-600 rounded-lg">
+                                    Message sent successfully! We'll get back to you soon.
+                                </div>
+                            )}
 
-                    <form onSubmit={handleSubmit} className="space-y-6" method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
-                        <input type="hidden" name="bot-field" />
-                        <input type="hidden" name="form-name" value="contact" />
-                        <div className="group">
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                Name
-                            </label>
-                            <input
-                                type="text"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleInputChange}
-                                required
-                                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 
+                            {formStatus.error && (
+                                <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-600 rounded-lg">
+                                    {formStatus.error}
+                                </div>
+                            )}
+
+                            <form onSubmit={handleSubmit} className="space-y-6" method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+                                <input type="hidden" name="bot-field" />
+                                <input type="hidden" name="form-name" value="contact" />
+                                <div className="group">
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                                        Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleInputChange}
+                                        required
+                                        className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 
               outline-none transition-all duration-200 group-hover:border-blue-300"
-                            />
-                        </div>
-                        <div className="group">
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleInputChange}
-                                required
-                                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 
+                                    />
+                                </div>
+                                <div className="group">
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                                        Email
+                                    </label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
+                                        required
+                                        className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 
               outline-none transition-all duration-200 group-hover:border-blue-300"
-                            />
-                        </div>
-                        <div className="group">
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                Message
-                            </label>
-                            <textarea
-                                name="message"
-                                value={formData.message}
-                                onChange={handleInputChange}
-                                required
-                                rows={4}
-                                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 
+                                    />
+                                </div>
+                                <div className="group">
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                                        Message
+                                    </label>
+                                    <textarea
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleInputChange}
+                                        required
+                                        rows={4}
+                                        className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 
               outline-none transition-all duration-200 group-hover:border-blue-300"
-                            />
-                        </div>
-                        <button
-                            type="submit"
-                            disabled={formStatus.loading}
-                            className={`w-full bg-blue-600 text-white px-6 py-3 rounded-lg 
+                                    />
+                                </div>
+                                <button
+                                    type="submit"
+                                    disabled={formStatus.loading}
+                                    className={`w-full bg-blue-600 text-white px-6 py-3 rounded-lg 
             hover:bg-blue-700 transform hover:scale-102 transition-all duration-200 
             inline-flex items-center justify-center
             ${formStatus.loading ? 'opacity-75 cursor-not-allowed' : ''}`}
-                        >
-                            {formStatus.loading ? (
-                                <>
-                                    Sending...
-                                    <span className="ml-2 animate-spin">⏳</span>
-                                </>
-                            ) : (
-                                <>
-                                    Send Message
-                                    <Mail className="ml-2 w-4 h-4" />
-                                </>
-                            )}
-                        </button>
-                    </form>
+                                >
+                                    {formStatus.loading ? (
+                                        <>
+                                            Sending...
+                                            <span className="ml-2 animate-spin">⏳</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            Send Message
+                                            <Mail className="ml-2 w-4 h-4" />
+                                        </>
+                                    )}
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="flex flex-col p-4">
+                            <div class="mt-2 text-gray-700 "> <p class="font-semibold group"> Alternatively, email us:</p> support@cloudsaverpro.com</div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
