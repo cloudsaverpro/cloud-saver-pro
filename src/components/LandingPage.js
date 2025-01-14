@@ -58,7 +58,7 @@ const LandingPage = () => {
         {
             quote: "Reduced our AWS costs by 40% in just two months. Incredible ROI.",
             author: "Hitesh Mittal",
-            role: "Director, ALFO Systems",
+            role: "Director, ALFO Systems Pvt. Ltd.",
             image: "/api/placeholder/64/64"
         }
     ];
