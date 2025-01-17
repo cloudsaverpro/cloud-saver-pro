@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../images/csp.png'
+import logo from '../images/csp.png';
 import { ArrowRight, Cloud, DollarSign, PieChart, Mail, Menu, X, ChevronUp } from 'lucide-react';
 
 const LandingPage = () => {

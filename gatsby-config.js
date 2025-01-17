@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: `https://www.cloudsaverpro.com`
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
