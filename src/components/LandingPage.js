@@ -147,8 +147,13 @@ const LandingPage = () => {
             <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="flex items-center justify-between h-16">
-                        <div className="flex-shrink-0 font-bold text-xl text-blue-600">
-                            <img alt="CloudSaverPro.com" src={logo} width="220" />
+                        <div className="flex items-center">
+                            <div className="flex-shrink-0">
+                                <img alt="CloudSaverPro.com" src={logo} className="object-cover h-20" />
+                            </div>
+                            <div className="ml-2 text-blue-600 text-3xl md:text-4xl " style={{ fontFamily: "Bebas Neue"}}>
+                                CLOUDSAVERPRO
+                            </div>
                         </div>
 
                         {/* Desktop Navigation */}
