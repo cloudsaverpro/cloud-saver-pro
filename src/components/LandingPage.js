@@ -59,7 +59,15 @@ const LandingPage = () => {
             quote: "Reduced our AWS costs by 40% in just two months. Incredible ROI.",
             author: "Hitesh Mittal",
             role: "Director, ALFO Systems Pvt. Ltd.",
-            image: "/api/placeholder/64/64"
+            image: "hitesh.jpg",
+            link: "https://www.linkedin.com/in/hitesh-mittal-1a56a212/"
+        },
+        {
+            quote: "Thanks to their cloud cost optimization, we saved over 50% in the first year. Highly recommend their expertise.",
+            author: "Divyani Agarwal",
+            role: "Founder, Pareto Aluminum Systems",
+            image: "pareto-dark-logo.svg",
+            link: "https://www.linkedin.com/in/divyani-agarwal-064b081b9/" 
         }
     ];
 
@@ -246,13 +254,13 @@ const LandingPage = () => {
                             >
                                 <div className="flex items-start space-x-4">
                                     <img
-                                        src={testimonial.image}
+                                        src={require(`../images/${testimonial.image}`).default}
                                         alt={testimonial.author}
                                         className="w-16 h-16 rounded-full"
                                     />
                                     <div>
                                         <p className="text-gray-600 mb-4 italic">"{testimonial.quote}"</p>
-                                        <p className="font-semibold">{testimonial.author}</p>
+                                        <a target="_blank" className="text-blue-600 hover:underline duration-200" href={testimonial.link}><p className="font-semibold">{testimonial.author}</p></a>
                                         <p className="text-gray-500 text-sm">{testimonial.role}</p>
                                     </div>
                                 </div>
@@ -269,7 +277,7 @@ const LandingPage = () => {
                         Let's Optimize Your Cloud Costs
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="card bg-gray-50 p-4 rounded-lg shadow-lg">
+                        <div className="card bg-gray-50 p-4 rounded-lg shadow-lg">
 
 
                             {formStatus.success && (
