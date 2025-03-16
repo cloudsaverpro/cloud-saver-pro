@@ -21,7 +21,7 @@ const Testimonials = ({ testimonials }) => (
                             />
                             <div>
                                 <p className="text-gray-600 mb-4 italic">"{testimonial.quote}"</p>
-                                <a target="_blank" className="text-blue-600 hover:underline duration-200" href={testimonial.link}><p className="font-semibold">{testimonial.author}</p></a>
+                                <a target="_blank" rel="noreferrer" className="text-blue-600 hover:underline duration-200" href={testimonial.link}><p className="font-semibold">{testimonial.author}</p></a>
                                 <p className="text-gray-500 text-sm">{testimonial.role}</p>
                             </div>
                         </div>
